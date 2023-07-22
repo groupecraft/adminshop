@@ -1,0 +1,6 @@
+name: adminshop
+version: '${project.version}'
+main: fr.groupecraft.adminshop.Adminshop
+api-version: '1.19'
+commands:
+  bazard:
