@@ -1,3 +1,10 @@
 message:
   before: "un nouvel item : "
   after: " à été ajouté au bazard"
+Lore:
+  number:
+    before: "Il y a "
+    after: " item restant"
+  price:
+    before: "au prix de "
+    after: " credit"

@@ -140,12 +140,11 @@ public class ItemsDB {
         return gson.toJson(itemStack);
     }
 
-    public ItemStack decodeItem(String string) {
+    public static ItemStack decodeItem(String string) {
         Gson gson =new GsonBuilder()
                 .serializeNulls()
                 .disableHtmlEscaping()
                 .create();
-
         ItemStack item = gson.fromJson(string, ItemStack.class);
         return item;
     }

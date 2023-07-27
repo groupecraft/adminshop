@@ -1,10 +1,9 @@
 package fr.groupecraft.adminshop;
 
 import fr.groupecraft.adminshop.bazard.BazardCommand;
-import fr.groupecraft.adminshop.item.Items;
-import fr.groupecraft.adminshop.utils.Config;
+import fr.groupecraft.adminshop.bazard.BazardInv;
+import fr.groupecraft.adminshop.bazard.Items;
 import fr.groupecraft.adminshop.utils.EventListener;
-import fr.groupecraft.adminshop.utils.Lang;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 import net.milkbowl.vault.economy.Economy;
@@ -26,7 +25,7 @@ public final class Adminshop extends JavaPlugin {
         instance = this;
 
         this.getCommand("Bazard").setExecutor(new BazardCommand());
-        Items.getInstance().loadItems();
+        BazardInv.getInstance().loadItems();//create the instance of BazardInv and load the saved items
         this.getServer().getPluginManager().registerEvents(new EventListener(), this);
     }
 
@@ -34,7 +33,7 @@ public final class Adminshop extends JavaPlugin {
     public void onDisable() {
         System.out.println("Bazard disable");
         super.onDisable();
-        Items.getInstance().saveItems();
+        BazardInv.getInstance().saveItems();
     }
 
     public static Adminshop getInstance() {

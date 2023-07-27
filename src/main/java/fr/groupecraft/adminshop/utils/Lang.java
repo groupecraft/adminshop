@@ -9,7 +9,8 @@ import java.io.File;
 import java.io.IOException;
 
 public enum Lang {
-    MESSAGE_BEFORE("message.before"),MESSAGE_AFTER("message.after");
+    MESSAGE_BEFORE("message.before"),MESSAGE_AFTER("message.after"),PRICE_BEFORE("lore.price.before"),PRICE_AFTER("lore.price.after"),NUMDER_BEFORE("lore.number.before"),
+    NUMBER_AFTER("lore.number.after");
 
     private String path;
     private FileConfiguration lang;

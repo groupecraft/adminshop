@@ -1,5 +1,7 @@
-package fr.groupecraft.adminshop.item;
+package fr.groupecraft.adminshop.bazard;
 
+import fr.groupecraft.adminshop.item.BazardItem;
+import fr.groupecraft.adminshop.item.ItemsDB;
 import fr.groupecraft.adminshop.players.MessagePlayer;
 import fr.groupecraft.adminshop.utils.Config;
 import org.bukkit.inventory.ItemStack;
@@ -12,10 +14,9 @@ import java.util.List;
  * */
 public class Items {
 
-    private static Items instance;
-    private List<BazardItem> items;
+    protected List<BazardItem> items;
 
-    private Items(){
+    protected Items(){
         items = new ArrayList<>();
     }
     /**
@@ -72,10 +73,6 @@ public class Items {
      * */
     public boolean hasItem(@NonNull BazardItem item){
         return getBazardItem(item.getItem()) !=null;
-    }
-    public static Items getInstance(){
-        if(instance==null) instance = new Items();
-        return instance;
     }
 
 }
